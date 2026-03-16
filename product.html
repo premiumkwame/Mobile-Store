@@ -3,50 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Products | Fresh Squeeze</title>
+    <title>Juices & Pastries | Juice by Evelyn</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="product.css">
 </head>
 <body>
     <nav class="navbar">
-        <a href="index.html" class="back-btn">← Back</a>
-        <div class="logo">OUR<span>SHOP</span></div>
+        <a href="index.html" class="back-link">← Home</a>
+        <div class="logo">OUR SHOP</div>
+        <div class="cart-icon">CART (0)</div>
     </nav>
 
-    <section class="carousel-container">
-        <h2>Signature Juices</h2>
-        <div class="carousel" id="juiceCarousel">
-            <div class="carousel-item active">
-                <img src="https://images.unsplash.com/photo-1622597467836-f38a6fe4020a?auto=format&fit=crop&w=300" alt="Pineapple">
-                <h3>Golden Pineapple</h3>
+    <section id="juices" class="juice-section">
+        <h3>Signature Juices</h3>
+        <p>Our Favourites Right Now</p>
+        <div class="juice-carousel-container">
+            <div class="carousel" id="juiceCarousel">
+                <div class="carousel-item active">
+                    <img src="apple_juice.png" alt="Apple Juice">
+                    <h4>Apple Juice</h4>
+                    <p>Evelyn's Orchard Blend</p>
+                    <span class="price">₵ 40.00</span>
+                    <button class="add-btn">ADD TO CART</button>
+                </div>
+                <div class="carousel-item">
+                    <img src="orange_juice.png" alt="Orange Juice">
+                    <h4>Orange Juice</h4>
+                    <p>Sun-Kissed Navel</p>
+                    <span class="price">₵ 35.00</span>
+                    <button class="add-btn">ADD TO CART</button>
+                </div>
+                <div class="carousel-item">
+                    <img src="pineapple_juice.png" alt="Pineapple Juice">
+                    <h4>Pineapple Juice</h4>
+                    <p>Golden Coast Sweet</p>
+                    <span class="price">₵ 45.00</span>
+                    <button class="add-btn">ADD TO CART</button>
+                </div>
+                <div class="carousel-item">
+                    <img src="watermelon_juice.png" alt="Watermelon Juice">
+                    <h4>Watermelon Juice</h4>
+                    <p>Pure, Refreshing Hydration</p>
+                    <span class="price">₵ 38.00</span>
+                    <button class="add-btn">ADD TO CART</button>
+                </div>
             </div>
-            <div class="carousel-item">
-                <img src="https://images.unsplash.com/photo-1621506289937-a8e4df240d0b?auto=format&fit=crop&w=300" alt="Watermelon">
-                <h3>Fresh Watermelon</h3>
+            <div class="carousel-controls">
+                <button id="prevBtn">Prev</button>
+                <button id="nextBtn">Next</button>
             </div>
-            <div class="carousel-item">
-                <img src="https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&w=300" alt="Orange">
-                <h3>Zesty Orange</h3>
-            </div>
-        </div>
-        <div class="carousel-controls">
-            <button onclick="moveCarousel(-1)">Prev</button>
-            <button onclick="moveCarousel(1)">Next</button>
         </div>
     </section>
 
-    <section class="pastry-grid">
-        <h2>Fresh Pastries</h2>
-        <div class="grid">
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=200" alt="Croissant">
-                <p>Butter Croissant</p>
-                <span>₵ 25.00</span>
+    <section id="pastries" class="pastry-section">
+        <h3>Artisanal Pastries</h3>
+        <p>Baked fresh daily</p>
+        <div class="pastry-grid">
+            <div class="pastry-card">
+                <img src="biscuits.png" alt="Buttermilk Biscuits">
+                <h4>Buttermilk Biscuits</h4>
+                <span class="price">₵ 25.00</span>
+                <button class="add-btn">ADD TO CART</button>
             </div>
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=200" alt="Muffin">
-                <p>Choco Muffin</p>
-                <span>₵ 30.00</span>
+            
+            <div class="pastry-card placeholder">
+                <div class="placeholder-img"><span>Pastry 2</span></div>
+                <h4>[Almond Croissant]</h4>
+                <span class="price">₵ 30.00</span>
+                <button class="add-btn">ADD TO CART</button>
+            </div>
+            <div class="pastry-card placeholder">
+                <div class="placeholder-img"><span>Pastry 3</span></div>
+                <h4>[Lavender Shortbread Cookies]</h4>
+                <span class="price">₵ 28.00</span>
+                <button class="add-btn">ADD TO CART</button>
+            </div>
+            <div class="pastry-card placeholder">
+                <div class="placeholder-img"><span>Pastry 4</span></div>
+                <h4>[Sourdough Muffin]</h4>
+                <span class="price">₵ 32.00</span>
+                <button class="add-btn">ADD TO CART</button>
+            </div>
+            <div class="pastry-card placeholder">
+                <div class="placeholder-img"><span>Pastry 5</span></div>
+                <h4>[Classic Apple Galette]</h4>
+                <span class="price">₵ 38.00</span>
+                <button class="add-btn">ADD TO CART</button>
             </div>
         </div>
     </section>
