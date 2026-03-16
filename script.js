@@ -18,6 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+    
+
 
     // Touch support for mobile
     let startX = 0;
@@ -34,4 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Auto-init
     updateCarousel();
-});
+}); 
+ // Footer
+ // Dynamic Year
+ document.getElementById('year').textContent = new Date().getFullYear();
