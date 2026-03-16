@@ -23,7 +23,7 @@ h1, h2, h3, .logo {
 /* Navbar */
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 20px;
     background: var(--cream);
