@@ -3,91 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juices & Pastries | Juice by Evelyn</title>
+    <title>Our Shop | Juice by Evelyn</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="product.css">
 </head>
 <body>
     <nav class="navbar">
-        <a href="index.html" class="back-link">← Home</a>
-        <div class="logo">OUR SHOP</div>
-        <div class="cart-icon">CART (0)</div>
+        <a href="index.html" class="back-link">← BACK</a>
+        <div class="logo">SHOP ALL</div>
+        <div class="cart">CART (0)</div>
     </nav>
 
-    <section id="juices" class="juice-section">
-        <h3>Signature Juices</h3>
-        <p>Our Favourites Right Now</p>
-        <div class="juice-carousel-container">
+    <section class="shop-section">
+        <p class="section-tag">BOTTLE SHOP</p>
+        <h2>Our Favourites Right Now</h2>
+        
+        <div class="carousel-container">
             <div class="carousel" id="juiceCarousel">
                 <div class="carousel-item active">
-                    <img src="apple_juice.png" alt="Apple Juice">
-                    <h4>Apple Juice</h4>
-                    <p>Evelyn's Orchard Blend</p>
+                    <div class="product-bg apple"></div>
+                    <img src="apple-juice.png" alt="Apple Juice">
+                    <h4>Estate Apple Juice</h4>
+                    <p>Evelyn's Orchard</p>
                     <span class="price">₵ 40.00</span>
                     <button class="add-btn">ADD TO CART</button>
                 </div>
                 <div class="carousel-item">
-                    <img src="orange_juice.png" alt="Orange Juice">
-                    <h4>Orange Juice</h4>
-                    <p>Sun-Kissed Navel</p>
+                    <div class="product-bg orange"></div>
+                    <img src="orange-juice.png" alt="Orange Juice">
+                    <h4>Sun-Kissed Orange</h4>
+                    <p>Navel & Blood Orange</p>
                     <span class="price">₵ 35.00</span>
                     <button class="add-btn">ADD TO CART</button>
                 </div>
                 <div class="carousel-item">
-                    <img src="pineapple_juice.png" alt="Pineapple Juice">
-                    <h4>Pineapple Juice</h4>
-                    <p>Golden Coast Sweet</p>
+                    <div class="product-bg pineapple"></div>
+                    <img src="pineapple-juice.png" alt="Pineapple Juice">
+                    <h4>Golden Pineapple</h4>
+                    <p>Smooth Cayenne</p>
                     <span class="price">₵ 45.00</span>
                     <button class="add-btn">ADD TO CART</button>
                 </div>
                 <div class="carousel-item">
-                    <img src="watermelon_juice.png" alt="Watermelon Juice">
-                    <h4>Watermelon Juice</h4>
-                    <p>Pure, Refreshing Hydration</p>
+                    <div class="product-bg watermelon"></div>
+                    <img src="watermelon-juice.png" alt="Watermelon Juice">
+                    <h4>Pure Watermelon</h4>
+                    <p>Hydration Tonic</p>
                     <span class="price">₵ 38.00</span>
                     <button class="add-btn">ADD TO CART</button>
                 </div>
             </div>
-            <div class="carousel-controls">
-                <button id="prevBtn">Prev</button>
-                <button id="nextBtn">Next</button>
-            </div>
         </div>
     </section>
 
-    <section id="pastries" class="pastry-section">
-        <h3>Artisanal Pastries</h3>
-        <p>Baked fresh daily</p>
+    <section id="pastries" class="shop-section">
+        <p class="section-tag">BAKERY SHOP</p>
+        <h2>Fresh from the Oven</h2>
         <div class="pastry-grid">
             <div class="pastry-card">
-                <img src="biscuits.png" alt="Buttermilk Biscuits">
-                <h4>Buttermilk Biscuits</h4>
+                <img src="ghana-rockies.jpg" alt="Ghana Rockies">
+                <h4>Ghana Rockies</h4>
                 <span class="price">₵ 25.00</span>
                 <button class="add-btn">ADD TO CART</button>
             </div>
-            
-            <div class="pastry-card placeholder">
-                <div class="placeholder-img"><span>Pastry 2</span></div>
-                <h4>[Almond Croissant]</h4>
+            <div class="pastry-card">
+                <div class="img-placeholder"></div>
+                <h4>Vanilla Shortbread</h4>
                 <span class="price">₵ 30.00</span>
                 <button class="add-btn">ADD TO CART</button>
             </div>
-            <div class="pastry-card placeholder">
-                <div class="placeholder-img"><span>Pastry 3</span></div>
-                <h4>[Lavender Shortbread Cookies]</h4>
+            <div class="pastry-card">
+                <div class="img-placeholder"></div>
+                <h4>Almond Croissant</h4>
+                <span class="price">₵ 35.00</span>
+                <button class="add-btn">ADD TO CART</button>
+            </div>
+            <div class="pastry-card">
+                <div class="img-placeholder"></div>
+                <h4>Sourdough Muffin</h4>
                 <span class="price">₵ 28.00</span>
                 <button class="add-btn">ADD TO CART</button>
             </div>
-            <div class="pastry-card placeholder">
-                <div class="placeholder-img"><span>Pastry 4</span></div>
-                <h4>[Sourdough Muffin]</h4>
+            <div class="pastry-card">
+                <div class="img-placeholder"></div>
+                <h4>Cinnamon Roll</h4>
                 <span class="price">₵ 32.00</span>
-                <button class="add-btn">ADD TO CART</button>
-            </div>
-            <div class="pastry-card placeholder">
-                <div class="placeholder-img"><span>Pastry 5</span></div>
-                <h4>[Classic Apple Galette]</h4>
-                <span class="price">₵ 38.00</span>
                 <button class="add-btn">ADD TO CART</button>
             </div>
         </div>

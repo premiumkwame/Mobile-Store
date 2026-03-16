@@ -1,25 +1,14 @@
-// Function for mobile menu placeholder
-function initMobileMenu() {
-    const menuIcon = document.querySelector('.menu-icon');
-    if (menuIcon) {
-        menuIcon.addEventListener('click', () => {
-            alert('Menu opened (implement drawer logic here).');
-        });
-    }
-}
-
-// Complex Stacked Horizontal Carousel Logic
-function initJuiceCarousel() {
+document.addEventListener('DOMContentLoaded', () => {
     const carousel = document.getElementById('juiceCarousel');
+    if (!carousel) return;
+
     const items = carousel.querySelectorAll('.carousel-item');
-    const prevBtn = document.getElementById('prevBtn');
-    const nextBtn = document.getElementById('nextBtn');
     let currentIndex = 0;
 
     function updateCarousel() {
         items.forEach((item, index) => {
             item.classList.remove('active', 'prev', 'next');
-            // The magic CSS handles the rest based on these classes
+            
             if (index === currentIndex) {
                 item.classList.add('active');
             } else if (index === (currentIndex - 1 + items.length) % items.length) {
@@ -30,22 +19,19 @@ function initJuiceCarousel() {
         });
     }
 
-    if (carousel && prevBtn && nextBtn) {
-        updateCarousel(); // Initial setup
-
-        prevBtn.addEventListener('click', () => {
-            currentIndex = (currentIndex - 1 + items.length) % items.length;
-            updateCarousel();
-        });
-
-        nextBtn.addEventListener('click', () => {
+    // Touch support for mobile
+    let startX = 0;
+    carousel.addEventListener('touchstart', e => startX = e.touches[0].clientX);
+    carousel.addEventListener('touchend', e => {
+        const endX = e.changedTouches[0].clientX;
+        if (startX - endX > 50) {
             currentIndex = (currentIndex + 1) % items.length;
-            updateCarousel();
-        });
-    }
-}
+        } else if (endX - startX > 50) {
+            currentIndex = (currentIndex - 1 + items.length) % items.length;
+        }
+        updateCarousel();
+    });
 
-document.addEventListener('DOMContentLoaded', () => {
-    initMobileMenu();
-    initJuiceCarousel();
+    // Auto-init
+    updateCarousel();
 });

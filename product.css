@@ -1,160 +1,117 @@
-/* Color Palette: matches main css */
-:root {
-    --primary-green: #2B7A48;
-    --dark-green: #1A4F2F;
-    --cream: #F8F4EA;
-    --dark-text: #222;
-    --white: #FFFFFF;
-}
+.shop-section { padding: 60px 20px; text-align: center; }
 
-/* Sections */
-.juice-section, .pastry-section { padding: 3rem 1.5rem; text-align: center; }
-.juice-section p, .pastry-section p { color: var(--dark-green); font-size: 1.8rem; margin-bottom: 1.5rem; font-weight: bold; }
-.juice-section h3, .pastry-section h3 { color: var(--dark-green); font-size: 1rem; margin-bottom: 0.3rem; text-transform: uppercase; letter-spacing: 1px;}
-
-/* Horizontal Stacked Carousel Logic: uses images behind other images */
-.juice-carousel-container {
-    padding: 2rem 0;
-    text-align: center;
-    perspective: 1000px; /* Crucial for 3D effect */
+/* Stacked Carousel Logic */
+.carousel-container {
     position: relative;
-    height: 550px; /* Total height to account for scaling cards */
-    display: flex;
-    justify-content: center;
+    height: 500px;
+    margin: 40px 0;
+    overflow: hidden;
 }
 
 .carousel {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    width: 100%;
     height: 100%;
+    position: relative;
 }
 
 .carousel-item {
     position: absolute;
-    width: 250px;
+    width: 260px;
     background: var(--white);
-    padding: 1.5rem;
-    border-radius: 20px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    transition: all 0.5s ease;
-    opacity: 0.6;
-    transform: scale(0.85) translateZ(-150px);
+    padding: 30px 20px;
+    border-radius: 15px;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+    transform: scale(0.6) translateX(0);
     z-index: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 2px solid transparent;
+    pointer-events: none;
+    border: 1px solid #f0eee6;
 }
 
-/* Active central item: largest and in front */
+/* The Focused Card */
 .carousel-item.active {
     opacity: 1;
-    transform: scale(1.1) translateZ(0);
+    transform: scale(1) translateX(0);
     z-index: 10;
-    border-color: var(--gold); /* Subtle gold border on active */
+    pointer-events: auto;
 }
 
-/* Previous item: stacked behind and to the left */
+/* The Cards Peeking Behind */
 .carousel-item.prev {
-    opacity: 0.75;
-    transform: translateX(-140px) scale(0.9) translateZ(-80px);
+    opacity: 0.6;
+    transform: scale(0.85) translateX(-180px);
     z-index: 5;
 }
 
-/* Next item: stacked behind and to the right */
 .carousel-item.next {
-    opacity: 0.75;
-    transform: translateX(140px) scale(0.9) translateZ(-80px);
+    opacity: 0.6;
+    transform: scale(0.85) translateX(180px);
     z-index: 5;
 }
 
-/* Specific styling for the cards within the stack - matches card in image_1.png */
 .carousel-item img {
     width: 100%;
-    max-height: 250px;
+    height: 220px;
     object-fit: contain;
-    margin-bottom: 1rem;
-    background-color: transparent;
+    margin-bottom: 20px;
+    z-index: 2;
+    position: relative;
 }
 
-.carousel-item h4 { font-size: 1.2rem; color: var(--dark-green); margin-bottom: 0.3rem;}
-.carousel-item p { font-size: 0.9rem; color: #777; font-weight: normal; margin-bottom: 1rem;}
-.carousel-item .price { font-size: 1.1rem; color: var(--dark-green); font-weight: bold; margin-bottom: 1rem; }
-
-/* Control Buttons - basic, styled like other cream buttons */
-.carousel-controls { margin-top: 1.5rem; display: flex; gap: 0.5rem; justify-content: center;}
-.carousel-controls button {
-    padding: 0.5rem 1rem;
-    border: 1px solid var(--dark-green);
-    background: var(--cream);
-    color: var(--dark-green);
-    border-radius: 20px;
-    font-weight: bold;
-    cursor: pointer;
-    font-size: 0.9rem;
+/* Abstract blob behind juice bottles like the reference */
+.product-bg {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 140px;
+    height: 180px;
+    border-radius: 50% 50% 40% 40%;
+    opacity: 0.2;
+    z-index: 1;
 }
+.apple { background: #FFDAB9; }
+.orange { background: #FFE4B5; }
+.pineapple { background: #FFFACD; }
+.watermelon { background: #FFC0CB; }
 
-/* Global button used across both grid and carousel */
+.carousel-item h4 { font-size: 1.2rem; margin-bottom: 5px; }
+.carousel-item p { font-size: 0.8rem; opacity: 0.7; margin-bottom: 15px; font-weight: bold; }
+.price { display: block; margin-bottom: 20px; font-weight: bold; }
+
 .add-btn {
     width: 100%;
-    padding: 1rem;
+    padding: 12px;
     border: none;
-    border-radius: 10px;
-    background: var(--primary-green); /* Green from image_0.png */
-    color: var(--white);
+    background: var(--accent-green);
+    color: white;
+    border-radius: 8px;
     font-weight: bold;
     cursor: pointer;
-    text-transform: uppercase;
 }
 
-/* Pastry Grid - Style guide: image_1.png 2-column grid */
+/* Pastry Grid */
 .pastry-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
+    gap: 15px;
+    margin-top: 30px;
 }
-
 .pastry-card {
     background: var(--white);
-    padding: 1rem;
-    border-radius: 15px;
-    border: 1px solid transparent;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid #f0eee6;
+    text-align: center;
 }
-.pastry-card:hover { border-color: var(--primary-green); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
-
-.pastry-card img {
+.pastry-card img, .img-placeholder {
     width: 100%;
-    max-height: 180px;
-    object-fit: contain;
-    margin-bottom: 1rem;
-    background-color: #FAFAF7; /* Matching light grey background from image_1.png cards */
-    border-radius: 10px;
-    padding: 10px;
+    height: 140px;
+    background: #fcfbf8;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    object-fit: cover;
 }
-
-.pastry-card h4 { font-size: 1rem; color: var(--dark-green); margin-bottom: 0.5rem;}
-.pastry-card .price { font-size: 1.1rem; color: var(--dark-green); font-weight: bold; margin-bottom: 1rem; }
-
-/* Placeholders for pastries */
-.pastry-card.placeholder { opacity: 0.6; }
-.pastry-card.placeholder .add-btn { background: #CCC; color: #666;}
-.pastry-card.placeholder .placeholder-img {
-    width: 100%;
-    height: 180px;
-    background-color: #EEE;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 1rem;
-    border: 2px dashed #AAA;
-}
-.pastry-card.placeholder .placeholder-img span { color: #999; font-weight: bold; text-transform: uppercase; font-size: 1.2rem;}
+.img-placeholder { border: 1px dashed #ddd; }

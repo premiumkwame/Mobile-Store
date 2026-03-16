@@ -3,42 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juice by Evelyn | Fresh Juices & Pastries</title>
+    <title>Juice by Evelyn | Fresh Juices & Handcrafted Bakes</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <nav class="navbar">
-        <div class="menu-icon"><i class="fas fa-bars"></i></div>
+        <div class="menu-icon"><span></span><span></span><span></span></div>
         <div class="logo">Juice by Evelyn</div>
-        <div class="cart-icon">CART (0)</div>
+        <div class="cart">CART (0)</div>
     </nav>
 
     <header class="hero">
         <div class="hero-content">
-            <h4>WELCOME TO JUICE BY EVELYN</h4>
-            <h1>Pure juice and handcrafted bakes that are good to the soul and good to the soil</h1>
-            <div class="hero-btns">
-                <a href="product.html#juices" class="shop-btn juices">SHOP JUICES</a>
-                <a href="product.html#pastries" class="shop-btn pastries">SHOP PASTRIES</a>
+            <p class="subtitle">WELCOME TO JUICE BY EVELYN</p>
+            <h1>Pure juice and handcrafted bakes that are good for the soul and good to the soil</h1>
+            <div class="hero-actions">
+                <a href="product.html" class="btn btn-green">SHOP BOTTLES</a>
+                <a href="product.html#pastries" class="btn btn-white">SHOP BAKES</a>
             </div>
         </div>
     </header>
 
-    <section class="browse-collections">
-        <h3>Browse Collections</h3>
-        <p>A sip for every occasion</p>
-        <div class="collection-wrapper">
-            <div class="collection-card mellow-afternoon">
-                <div class="overlay">
-                    <h2>Mellow Afternoon</h2>
-                    <h4>FRESH TONICS AND SLOW SIPPERS</h4>
+    <section class="collections">
+        <p class="section-tag">BROWSE COLLECTIONS</p>
+        <h2>A sip for every occasion</h2>
+        <div class="collection-scroll">
+            <div class="collection-card" style="background-image: url('mellow-afternoon.jpg');">
+                <div class="card-overlay">
+                    <h3>Mellow Afternoon</h3>
+                    <p>HERBAL TONICS AND SLOW SIPPERS</p>
                 </div>
             </div>
-            <div class="collection-card morning-comforts">
-                <div class="overlay">
-                    <h2>Morning Comforts</h2>
-                    <h4>FRESH BAKES & MORNING BREWS</h4>
+            <div class="collection-card" style="background-image: url('morning-comforts.jpg');">
+                <div class="card-overlay">
+                    <h3>Morning Comforts</h3>
+                    <p>FRESH BAKES AND MORNING BREWS</p>
                 </div>
             </div>
         </div>
@@ -46,31 +45,29 @@
 
     <section class="testimonials">
         <h2>What Our Fans Say</h2>
-        <div class="testimonial-wrapper">
+        <div class="testimonial-container">
             <div class="testimonial-card">
                 <p>"The Golden Pineapple juice is a game changer. It tastes like it was squeezed five minutes ago!"</p>
                 <h4>— Ama K.</h4>
             </div>
             <div class="testimonial-card">
-                <p>"Best croissants in the city. Perfectly flaky and they pair so well with the Zesty Orange juice."</p>
+                <p>"Best pastries in the city. Perfectly flaky and they pair so well with the Zesty Orange juice."</p>
                 <h4>— David O.</h4>
-            </div>
-            <div class="testimonial-card">
-                <p>"I love that everything is natural. My kids actually ask for these juices over soda now."</p>
-                <h4>— Sarah M.</h4>
             </div>
         </div>
     </section>
 
     <footer>
-        <div class="footer-top">
-            <div class="logo-small">Juice by Evelyn</div>
+        <div class="footer-main">
+            <div class="logo">Juice by Evelyn</div>
             <div class="newsletter">
                 <input type="email" placeholder="Join our email list">
                 <button>→</button>
             </div>
         </div>
-        <p>&copy; 2026 Juice by Evelyn. All rights reserved.</p>
+        <div class="footer-links">
+            <span>© 2026 Juice by Evelyn. All rights reserved.</span>
+        </div>
     </footer>
 
     <script src="script.js"></script>
