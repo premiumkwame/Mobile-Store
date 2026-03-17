@@ -90,9 +90,20 @@ h1, h2, h3, .logo {
     background: rgba(0,0,0,0.1);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     color: white;
+    text-align: center;
+}
+.card-overlay-center {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    color: white;   
     text-align: center;
 }
 
@@ -143,27 +154,28 @@ h1, h2, h3, .logo {
         }
 
 
-        
         .social-icons {
-            display: flex;
-            gap: 15px;
-            margin-top: 1.5rem;
-        }
-        
-        .social-icons a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background:  rgba(247, 6, 6, 0.1);
-            border-radius: 50%;
-            transition: all 0.3s;
-        }
-        
+    display: flex;
+    justify-content: center; 
+    gap: 15px;
+    margin-top: 1.5rem;
+    width: 100%;  
+}
+
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgb(7, 0, 0);
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+       
         .social-icons a:hover {
             background: var(--primary);
-            color: #ddd;
+            color: #f9f8f8;
             transform: translateY(-3px);
         }
         

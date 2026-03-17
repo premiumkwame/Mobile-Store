@@ -1,14 +1,15 @@
-/* Navbar */
 .navbar {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
+    position: relative;
     padding: 20px;
-    background: var(--cream);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
 }
+
+.back-link {
+    position: absolute;
+    left: 20px; 
+}
+
 .order-section { padding: 60px 20px; text-align: center; }
 
 /* Stacked Carousel Logic */
