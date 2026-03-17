@@ -92,7 +92,7 @@ h1, h2, h3, .logo {
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    color: white;
+    color: black !important; 
     text-align: center;
 }
 .card-overlay-center {
