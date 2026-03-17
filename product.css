@@ -91,7 +91,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 40px 0; /* Adds space between the carousels */
+  margin-top: -20px;
+  margin-bottom: -20px;
   width: 100%;
   overflow: hidden;
 }
