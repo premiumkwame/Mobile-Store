@@ -199,3 +199,73 @@ h1, h2, h3, .logo {
         font-size: x-small;
         }
 
+/* ===== PC / DESKTOP (768px+) ===== */
+@media (min-width: 768px) {
+
+  /* Navbar: spread out with logo left, links right */
+  .navbar {
+    justify-content: space-between;
+    padding: 20px 60px;
+  }
+
+  /* Hero: bigger text, constrain width */
+  .hero {
+    height: 90vh;
+    padding: 40px;
+  }
+
+  .hero-content {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .hero h1 {
+    font-size: 3.5rem;
+    margin: 20px 0 50px;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    padding: 18px 40px;
+    font-size: 1rem;
+    min-width: 180px;
+  }
+
+  /* Collections: stop horizontal scroll, use a grid instead */
+  .collections {
+    padding: 80px 60px;
+  }
+
+  .collections h2 {
+    font-size: 2.8rem;
+  }
+
+  .collection-scroll {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    overflow-x: visible; /* disable mobile scroll */
+    gap: 24px;
+  }
+
+  .collection-card {
+    min-width: unset; /* remove mobile fixed width */
+    height: 450px;
+  }
+
+  /* Footer: already uses flex-wrap, but give it proper padding */
+  footer {
+    padding: 60px 80px 30px;
+  }
+
+  .footer-content {
+    justify-content: space-between;
+  }
+
+  .footer-section {
+    min-width: unset;
+    flex: 1;
+  }
+}
